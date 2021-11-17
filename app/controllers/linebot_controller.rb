@@ -49,7 +49,7 @@ class LinebotController < ApplicationController
         puts "Hello!!"
         message = {
             type: 'text',
-            text: '今日がタスクの期限でっせ！https://oshierukun.herokuapp.com/'
+            text: '今日がタスクの期限でっせ！'
         }
         client = Line::Bot::Client.new { |config|
             config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
