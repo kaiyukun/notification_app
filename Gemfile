@@ -65,3 +65,5 @@ gem 'dotenv-rails'
 group :production do
   gem 'pg'
 end
+
+gem "omniauth-rails_csrf_protection"
