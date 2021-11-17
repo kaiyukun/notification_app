@@ -1,2 +1,23 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h2>ログインしているユーザー：<%= current_user.name %></h2>
+
+
+<h3>タスクの追加</h3>
+<%= form_with model:@post do |f| %>
+    <div class="form">
+        <%= f.label :body %>
+        <%= f.text_field :body %>
+    </div>
+    <div class="form">
+        <%= f.label :endday %>
+        <%= f.date_field :endday %>
+    </div>
+    <%= f.submit %>
+<% end %>
+
+<h3>タスク一覧</h3>
+<% @posts.each do |p| %>
+    <div class="post">
+        <b>タスク</b>：<%= p.body %>
+        <b>期限</b>：<%= p.endday %>
+    </div>
+<% end %>

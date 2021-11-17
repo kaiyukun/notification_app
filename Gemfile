@@ -67,3 +67,5 @@ group :production do
 end
 
 gem "omniauth-rails_csrf_protection"
+
+gem 'line-bot-api'
