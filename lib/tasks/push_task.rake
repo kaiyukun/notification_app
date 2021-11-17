@@ -19,8 +19,8 @@ namespace :push_task do
         end
         
         limit_tasks.each do |user|
-            response = client.push_message(user.user_uid, message)
-            p response
+            client.push_message(user.user_uid, message)
+            
         end
     end
 end
