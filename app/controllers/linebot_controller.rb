@@ -59,7 +59,7 @@ class LinebotController < ApplicationController
         limit_tasks.each do |user|
             message = {
                 type: 'text',
-                text: "#{user.body}の期限は今日でっせ！"
+                text: "「#{user.body}」の期限は今日でっせ！"
             }
             response = client.push_message(user.user_uid, message)
             p response
