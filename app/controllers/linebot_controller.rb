@@ -61,11 +61,11 @@ class LinebotController < ApplicationController
             puts "ユーザーID：#{user.user_uid}"
         end
         
-        # limit_tasks.each do |user|
-        #     response = client.push_message(user.user_uid, message)
-        #     p response
-        # end
-        response = client.push_message('U30fa6516908f1e37b8cdcaacbc88496a', message)
-        p response
+        limit_tasks.each do |user|
+            response = client.push_message(user.user_uid, message)
+            p response
+        end
+        # response = client.push_message('U30fa6516908f1e37b8cdcaacbc88496a', message)
+        # p response
     end
 end
