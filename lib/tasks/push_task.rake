@@ -2,6 +2,6 @@ namespace :push_task do
     desc "LINEBOT：タスクの通知" 
     task :push_line_message_task => :environment do
         webhook = LinebotController.new
-        puts webhook.push
+        webhook.push
     end
 end
