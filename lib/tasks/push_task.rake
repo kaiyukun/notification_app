@@ -6,12 +6,12 @@ namespace :push_task do
             config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
         }
         limit_tasks = Post.where(endday: Date.today)
-        limit_tasks.each do |user|
+        limit_tasks.each do |t|
             puts "名前：#{user.body}"
             puts "ユーザーID：#{user.user_uid}"
         end
         
-        limit_tasks.each do |user|
+        limit_tasks.each do |t|
             message = {
                 type: 'text',
                 text: "「#{user.body}」の期限は今日でっせ！"
