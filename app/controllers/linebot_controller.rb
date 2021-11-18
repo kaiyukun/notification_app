@@ -65,6 +65,6 @@ class LinebotController < ApplicationController
         #     response = client.push_message(user.user_uid, message)
         #     p response
         # end
-        response = client.push_message(U5a8abc7a4d8b18ec784cb62e4dd38f03, message)
+        response = client.push_message('U5a8abc7a4d8b18ec784cb62e4dd38f03', message)
     end
 end
