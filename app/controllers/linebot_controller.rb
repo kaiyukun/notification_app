@@ -58,12 +58,13 @@ class LinebotController < ApplicationController
         limit_tasks = Post.where(endday: Date.today)
         limit_tasks.each do |user|
             puts "名前：#{user.body}"
-            puts "年齢：#{user.user_uid}"
+            puts "ユーザーID：#{user.user_uid}"
         end
         
-        limit_tasks.each do |user|
-            response = client.push_message(user.user_uid, message)
-            p response
-        end
+        # limit_tasks.each do |user|
+        #     response = client.push_message(user.user_uid, message)
+        #     p response
+        # end
+        response = client.push_message(U5a8abc7a4d8b18ec784cb62e4dd38f03, message)
     end
 end
